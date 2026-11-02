@@ -1,11 +1,11 @@
 name: distribution-capricorn
-version: 0.3.0-rc4
+version: 0.3.0
 type: distribution
 description: "Capricorn — AIOS mit Video-Analyse, Bilderstellung, Capability-Tree und der Assistentin Anja"
 license: Apache-2.0
 requires:
   aios: ">=0.6,<0.7"
-kernel: "==0.6.1-rc4"
+kernel: "==0.6.1"
 depends:
   skill-video-analyse: "==0.2.1"
   assistant-anja: "==0.2.1"
