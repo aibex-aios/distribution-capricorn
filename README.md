@@ -1,6 +1,6 @@
 # distribution-capricorn
 
-Distribution *Capricorn* von AIbex AIOS, Version 0.4.0 (Release-Kandidat 0.4.0-rc2): der Kernel AIOS 0.6.2 mit der Video-Analyse, der Bilderstellung, dem Capability-Tree, dem Abschluss einer Session mit `/cleanup` und der Assistentin Anja 0.3.0. Capricorn übernimmt den Inhalt von *Rothirsch* 1.1.0 und ergänzt die Skills `skill-image-generation`, (ab 0.2.0) `skill-capability-tree` und (ab 0.4.0) `skill-cleanup`.
+Distribution *Capricorn* von AIbex AIOS, Version 0.4.0 (Release-Kandidat 0.4.0-rc3): der Kernel AIOS 0.6.2 mit der Video-Analyse, der Bilderstellung, dem Capability-Tree, dem Abschluss einer Session mit `/cleanup` und der Assistentin Anja 0.3.0. Capricorn übernimmt den Inhalt von *Rothirsch* 1.1.0 und ergänzt die Skills `skill-image-generation`, (ab 0.2.0) `skill-capability-tree` und (ab 0.4.0) `skill-cleanup`.
 
 | Teil | Version | kommt mit |
 |---|---|---|
@@ -16,7 +16,7 @@ Distribution *Capricorn* von AIbex AIOS, Version 0.4.0 (Release-Kandidat 0.4.0-r
 ## Installieren
 
 ```bash
-~/.aios/bin/aios --install "distribution-capricorn==0.4.0-rc2" [<vault>]
+~/.aios/bin/aios --install "distribution-capricorn==0.4.0-rc3" [<vault>]
 ```
 
 Ohne Bereich wählt AIOS die höchste Release; einen Kandidaten holt nur ein Bereich, der ihn nennt.
