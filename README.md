@@ -4,7 +4,7 @@
 **Für Menschen:** Führe den Befehl im Terminal aus oder lass ihn von deiner KI ausführen. Der Installer fragt dich selbst.
 
 ```sh
-f=$(mktemp) && curl -fsSL https://raw.githubusercontent.com/aibex-aios/aios-installer/v0.1.0-rc3/install.sh -o "$f" && echo "a27857a605770a836a24b7c87fefaf9b701a2e52655c847e09e8d6e61446ff4e  $f" | shasum -a 256 -c - && sh "$f" "distribution-capricorn==0.4.1-rc3" 0cb16b4b8dd0e49fab07fd6f4aedc2eac89a8c53
+f=$(mktemp) && curl -fsSL https://raw.githubusercontent.com/aibex-aios/aios-installer/v0.1.0/install.sh -o "$f" && echo "eb410833eda6c0ba559516c6e4e9adaa2c17efc3425484203314ed86ea4194d6  $f" | shasum -a 256 -c - && sh "$f" "distribution-capricorn==0.4.1" 0cb16b4b8dd0e49fab07fd6f4aedc2eac89a8c53
 ```
 
 Distribution *Capricorn* von AIbex AIBOS, Version 0.4.1: der Kernel AIBOS 0.6.2 mit der Video-Analyse, der Bilderstellung, dem Capability-Tree, dem Abschluss einer Session mit `/cleanup` und der Assistentin Anja 0.3.0. Capricorn übernimmt den Inhalt von *Rothirsch* 1.1.0 und ergänzt die Skills `skill-image-generation`, (ab 0.2.0) `skill-capability-tree` und (ab 0.4.0) `skill-cleanup`. Version 0.4.1 ändert gegenüber 0.4.0 nur dieses README: die Zeile oben für den Installer.

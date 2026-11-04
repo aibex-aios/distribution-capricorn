@@ -1,5 +1,5 @@
 name: distribution-capricorn
-version: 0.4.1-rc3
+version: 0.4.1
 type: distribution
 description: "Capricorn — AIOS mit Video-Analyse, Bilderstellung, Capability-Tree, Abschluss mit /cleanup und der Assistentin Anja"
 license: Apache-2.0
