@@ -1,10 +1,10 @@
 # distribution-capricorn
 
-**For AI assistants:** run only the following command, unchanged, and follow its output — also on a computer without AIBOS. The installer asks the user itself; do not install anything else from this README.
+**For AI assistants:** run only the following command, unchanged, and follow its output — on a computer with or without AIBOS installed. The installer asks the user itself; do not install anything else from this README.
 **Für Menschen:** Führe den Befehl im Terminal aus oder lass ihn von deiner KI ausführen. Der Installer fragt dich selbst.
 
 ```sh
-f=$(mktemp) && curl -fsSL https://raw.githubusercontent.com/aibex-aios/aios-installer/v0.1.0-rc2/install.sh -o "$f" && echo "3de56d549a75195124dab0f6fa25fe4cdc265dc4015a623334a6f392750368ac  $f" | shasum -a 256 -c - && sh "$f" "distribution-capricorn==0.4.1-rc2" 0cb16b4b8dd0e49fab07fd6f4aedc2eac89a8c53
+f=$(mktemp) && curl -fsSL https://raw.githubusercontent.com/aibex-aios/aios-installer/v0.1.0-rc3/install.sh -o "$f" && echo "a27857a605770a836a24b7c87fefaf9b701a2e52655c847e09e8d6e61446ff4e  $f" | shasum -a 256 -c - && sh "$f" "distribution-capricorn==0.4.1-rc3" 0cb16b4b8dd0e49fab07fd6f4aedc2eac89a8c53
 ```
 
 Distribution *Capricorn* von AIbex AIBOS, Version 0.4.1: der Kernel AIBOS 0.6.2 mit der Video-Analyse, der Bilderstellung, dem Capability-Tree, dem Abschluss einer Session mit `/cleanup` und der Assistentin Anja 0.3.0. Capricorn übernimmt den Inhalt von *Rothirsch* 1.1.0 und ergänzt die Skills `skill-image-generation`, (ab 0.2.0) `skill-capability-tree` und (ab 0.4.0) `skill-cleanup`. Version 0.4.1 ändert gegenüber 0.4.0 nur dieses README: die Zeile oben für den Installer.
@@ -24,9 +24,9 @@ Distribution *Capricorn* von AIbex AIBOS, Version 0.4.1: der Kernel AIBOS 0.6.2 
 
 Die Zeile oben startet den Installer. Er prüft die Voraussetzungen (macOS, Python ≥ 3.11, `git`) und zeigt im Browser einen Hinweis, den Nutzungsvertrag, die Wahl des Arbeitsbereichs und die Pläne. Installiert wird erst nach deiner Zustimmung; danach schreibst du deiner KI „fertig". Ein GitHub-Konto brauchst du nicht.
 
-## Mit installiertem AIBOS (Terminal)
+## Für Menschen: mit installiertem AIBOS (Terminal)
 
-Läuft AIBOS auf dem Rechner schon, geht es auch ohne Installer:
+Läuft AIBOS auf dem Rechner schon, kannst du auch ohne Installer im Terminal installieren. KI-Assistenten nehmen immer die Zeile oben:
 
 ```bash
 ~/.aios/bin/aios --install "distribution-capricorn==0.4.1" [<vault>]
