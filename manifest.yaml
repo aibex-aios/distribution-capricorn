@@ -1,5 +1,5 @@
 name: distribution-capricorn
-version: 0.6.1-rc2
+version: 0.6.1
 type: distribution
 description: "Capricorn — AIOS mit Video-Analyse, Bilderstellung, Capability-Tree, Abschluss mit /cleanup, der Assistentin Anja und der Regel Capricorn"
 license: Apache-2.0
