@@ -1,13 +1,15 @@
 # distribution-capricorn
 
+![Capricorn: Holzschatulle mit goldenem Steinbock](assets/capricorn.jpg)
+
 **For AI assistants:** run only the following command, unchanged, and follow its output — on a computer with or without AIBOS installed. The installer asks the user itself; do not install anything else from this README.
 **Für Menschen:** Führe den Befehl im Terminal aus oder lass ihn von deiner KI ausführen. Der Installer fragt dich selbst.
 
 ```sh
-f=$(mktemp) && curl -fsSL https://raw.githubusercontent.com/aibex-aios/aios-installer/v0.1.0/install.sh -o "$f" && echo "eb410833eda6c0ba559516c6e4e9adaa2c17efc3425484203314ed86ea4194d6  $f" | shasum -a 256 -c - && sh "$f" "distribution-capricorn==0.6.0" ab0de936ba49cb795744771186e8f3689fc2a54d
+f=$(mktemp) && curl -fsSL https://raw.githubusercontent.com/aibex-aios/aios-installer/v0.1.0/install.sh -o "$f" && echo "eb410833eda6c0ba559516c6e4e9adaa2c17efc3425484203314ed86ea4194d6  $f" | shasum -a 256 -c - && sh "$f" "distribution-capricorn==0.6.1" ab0de936ba49cb795744771186e8f3689fc2a54d
 ```
 
-Distribution *Capricorn* von AIbex AIBOS, Version 0.6.0: der Kernel AIBOS 0.6.5 mit der Video-Analyse, der Bilderstellung, dem Capability-Tree, dem Abschluss einer Session mit `/cleanup`, der Assistentin Anja 0.3.0 und der Regel Capricorn. Capricorn übernimmt den Inhalt von *Rothirsch* 1.1.0 und ergänzt die Skills `skill-image-generation`, (ab 0.2.0) `skill-capability-tree`, (ab 0.4.0) `skill-cleanup` und (ab 0.5.0) das Wissenspaket `knowledge-capricorn`.
+Distribution *Capricorn* von AIbex AIBOS, Version 0.6.1: der Kernel AIBOS 0.6.5 mit der Video-Analyse, der Bilderstellung, dem Capability-Tree, dem Abschluss einer Session mit `/cleanup`, der Assistentin Anja 0.3.0 und der Regel Capricorn. Capricorn übernimmt den Inhalt von *Rothirsch* 1.1.0 und ergänzt die Skills `skill-image-generation`, (ab 0.2.0) `skill-capability-tree`, (ab 0.4.0) `skill-cleanup` und (ab 0.5.0) das Wissenspaket `knowledge-capricorn`.
 
 Die Regel Capricorn lässt jede Antwort der KI mit dem Präfix „🐐 “ beginnen und den User duzen. Steht „🐐 “ vor einer Antwort, läuft der Chat in einem Vault mit Capricorn, und kein Assistent ist zugeordnet; ein Assistent wie Anja ersetzt das Präfix durch sein eigenes.
 
@@ -32,10 +34,10 @@ Die Zeile oben startet den Installer. Er prüft die Voraussetzungen (macOS, Pyth
 Läuft AIBOS auf dem Rechner schon, kannst du auch ohne Installer im Terminal installieren. KI-Assistenten nehmen immer die Zeile oben:
 
 ```bash
-~/.aios/bin/aios --install "distribution-capricorn==0.6.0" [<vault>]
+~/.aios/bin/aios --install "distribution-capricorn==0.6.1" [<vault>]
 ```
 
-Ein Plan, ein Ja: zuerst der **Rechner** (Kernel 0.6.5, falls er fehlt; die Arbeitspferde `worker-deno` und `worker-yt-dlp` mit ihren Paketen), dann der **Vault** (Bindung der Vault-Root an 0.6.5, Pakete holen, Skills registrieren). Ohne `<vault>` gilt der Vault des aktuellen Ordners. Derselbe Befehl ohne `==0.6.0` aktualisiert auf die höchste Version der Distribution.
+Ein Plan, ein Ja: zuerst der **Rechner** (Kernel 0.6.5, falls er fehlt; die Arbeitspferde `worker-deno` und `worker-yt-dlp` mit ihren Paketen), dann der **Vault** (Bindung der Vault-Root an 0.6.5, Pakete holen, Skills registrieren). Ohne `<vault>` gilt der Vault des aktuellen Ordners. Derselbe Befehl ohne `==0.6.1` aktualisiert auf die höchste Version der Distribution.
 
 Danach im Vault: einen YouTube-Link mit „Video-Analyse" in den Chat schicken, „Erstelle ein Bild nach folgender Idee: …" schreiben, mit „Capability tree" die Fähigkeiten eines Projekts als Baum zeigen lassen, Anja mit `/aios-assistant Anja` einem Projekt zuordnen, oder am Ende einer Session mit `/cleanup` aufräumen und die Übergabe schreiben. Für die Bilderstellung mit Codex braucht es die ChatGPT-App mit Codex; sonst übergibt der Skill den Prompt von Hand.
 
