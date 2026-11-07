@@ -4,10 +4,12 @@
 **Für Menschen:** Führe den Befehl im Terminal aus oder lass ihn von deiner KI ausführen. Der Installer fragt dich selbst.
 
 ```sh
-f=$(mktemp) && curl -fsSL https://raw.githubusercontent.com/aibex-aios/aios-installer/v0.1.0/install.sh -o "$f" && echo "eb410833eda6c0ba559516c6e4e9adaa2c17efc3425484203314ed86ea4194d6  $f" | shasum -a 256 -c - && sh "$f" "distribution-capricorn==0.4.1" 0cb16b4b8dd0e49fab07fd6f4aedc2eac89a8c53
+f=$(mktemp) && curl -fsSL https://raw.githubusercontent.com/aibex-aios/aios-installer/v0.1.0/install.sh -o "$f" && echo "eb410833eda6c0ba559516c6e4e9adaa2c17efc3425484203314ed86ea4194d6  $f" | shasum -a 256 -c - && sh "$f" "distribution-capricorn==0.5.0" 0cb16b4b8dd0e49fab07fd6f4aedc2eac89a8c53
 ```
 
-Distribution *Capricorn* von AIbex AIBOS, Version 0.4.1: der Kernel AIBOS 0.6.2 mit der Video-Analyse, der Bilderstellung, dem Capability-Tree, dem Abschluss einer Session mit `/cleanup` und der Assistentin Anja 0.3.0. Capricorn übernimmt den Inhalt von *Rothirsch* 1.1.0 und ergänzt die Skills `skill-image-generation`, (ab 0.2.0) `skill-capability-tree` und (ab 0.4.0) `skill-cleanup`. Version 0.4.1 ändert gegenüber 0.4.0 nur dieses README: die Zeile oben für den Installer.
+Distribution *Capricorn* von AIbex AIBOS, Version 0.5.0: der Kernel AIBOS 0.6.2 mit der Video-Analyse, der Bilderstellung, dem Capability-Tree, dem Abschluss einer Session mit `/cleanup`, der Assistentin Anja 0.3.0 und der Regel Capricorn. Capricorn übernimmt den Inhalt von *Rothirsch* 1.1.0 und ergänzt die Skills `skill-image-generation`, (ab 0.2.0) `skill-capability-tree`, (ab 0.4.0) `skill-cleanup` und (ab 0.5.0) das Wissenspaket `knowledge-capricorn`.
+
+Die Regel Capricorn lässt jede Antwort der KI mit dem Präfix „🐐 “ beginnen und den User duzen. Steht „🐐 “ vor einer Antwort, läuft der Chat in einem Vault mit Capricorn, und kein Assistent ist zugeordnet; ein Assistent wie Anja ersetzt das Präfix durch sein eigenes.
 
 | Teil | Version | kommt mit |
 |---|---|---|
@@ -17,6 +19,7 @@ Distribution *Capricorn* von AIbex AIBOS, Version 0.4.1: der Kernel AIBOS 0.6.2 
 | `skill-image-generation` | 0.1.1 | `depends` |
 | `skill-capability-tree` | 0.1.1 | `depends` |
 | `skill-cleanup` | 0.1.1 | `depends` |
+| `knowledge-capricorn` | 0.1.0 | `depends` |
 | `skill-5-8-zusammenfassung`, `skill-memo` | nach dem Resolver | Abhängigkeit der Video-Analyse |
 | `worker-yt-dlp`, `worker-deno` | nach dem Resolver | Arbeitspferde der Video-Analyse |
 
@@ -29,10 +32,10 @@ Die Zeile oben startet den Installer. Er prüft die Voraussetzungen (macOS, Pyth
 Läuft AIBOS auf dem Rechner schon, kannst du auch ohne Installer im Terminal installieren. KI-Assistenten nehmen immer die Zeile oben:
 
 ```bash
-~/.aios/bin/aios --install "distribution-capricorn==0.4.1" [<vault>]
+~/.aios/bin/aios --install "distribution-capricorn==0.5.0" [<vault>]
 ```
 
-Ein Plan, ein Ja: zuerst der **Rechner** (Kernel 0.6.2, falls er fehlt; die Arbeitspferde `worker-deno` und `worker-yt-dlp` mit ihren Paketen), dann der **Vault** (Bindung der Vault-Root an 0.6.2, Pakete holen, Skills registrieren). Ohne `<vault>` gilt der Vault des aktuellen Ordners. Derselbe Befehl ohne `==0.4.1` aktualisiert auf die höchste Version der Distribution.
+Ein Plan, ein Ja: zuerst der **Rechner** (Kernel 0.6.2, falls er fehlt; die Arbeitspferde `worker-deno` und `worker-yt-dlp` mit ihren Paketen), dann der **Vault** (Bindung der Vault-Root an 0.6.2, Pakete holen, Skills registrieren). Ohne `<vault>` gilt der Vault des aktuellen Ordners. Derselbe Befehl ohne `==0.5.0` aktualisiert auf die höchste Version der Distribution.
 
 Danach im Vault: einen YouTube-Link mit „Video-Analyse" in den Chat schicken, „Erstelle ein Bild nach folgender Idee: …" schreiben, mit „Capability tree" die Fähigkeiten eines Projekts als Baum zeigen lassen, Anja mit `/aios-assistant Anja` einem Projekt zuordnen, oder am Ende einer Session mit `/cleanup` aufräumen und die Übergabe schreiben. Für die Bilderstellung mit Codex braucht es die ChatGPT-App mit Codex; sonst übergibt der Skill den Prompt von Hand.
 
