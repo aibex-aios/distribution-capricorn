@@ -1,7 +1,7 @@
 name: distribution-capricorn
-version: 0.7.0
+version: 0.8.0-rc1
 type: distribution
-description: "Capricorn — AIOS mit Video-Analyse, Bilderstellung, Capability-Tree, Abschluss mit /cleanup, der Assistentin Anja und der Regel Capricorn"
+description: "Capricorn — AIOS mit Video-Analyse, Bilderstellung, Schautafel, Capability-Tree, Abschluss mit /cleanup, der Assistentin Anja und der Regel Capricorn"
 license: Apache-2.0
 requires:
   aios: ">=0.6,<0.7"
@@ -10,6 +10,7 @@ depends:
   skill-video-analyse: "==0.3.0"
   assistant-anja: "==0.3.0"
   skill-image-generation: "==0.1.1"
+  skill-schautafel: "==0.1.0"
   skill-capability-tree: "==0.1.1"
   skill-cleanup: "==0.1.1"
   knowledge-capricorn: "==0.1.0"
